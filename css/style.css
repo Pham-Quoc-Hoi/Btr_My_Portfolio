@@ -1,0 +1,285 @@
+/* CDN BStr đã reset */
+/* html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* GLOBAL */
+* {
+    font-size: 16px;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    /* Xác định độ ưu tiên position bằng z-index */
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .logo i {
+    color: #35a22c;
+    font-size: 2.5rem;
+}
+
+header .logo span {
+    font-size: 2rem;
+}
+
+.menu .nav-item {
+    margin: 0 0.8rem;
+}
+
+.menu .nav-item a {
+    color: white !important;
+}
+
+.menu .nav-item a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color: #35a22c;
+    transition: all 0.5s;
+}
+
+.menu .nav-item.active a::after,
+.menu .nav-item:hover a::after {
+    width: 100%;
+}
+
+.menu .nav-item.active a,
+.menu .nav-item:hover a {
+    color: #35a22c !important;
+}
+
+/* CAROUSEL */
+/* #demo {
+    position: relative;
+} */
+
+.carousel-item {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.127)
+}
+
+.carousel-item:nth-child(1) {
+    background-image: url(./../img/finland.jpg);
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url(./../img/mountains.jpg);
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url(./../img/mountains-1.jpg);
+}
+
+.carousel__thumb {
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel__thumb img {
+    border-radius: 50%;
+}
+
+/* 
+.carousel__thumb img {
+    width: 150px;
+    border-radius: 50%;
+} */
+
+.carousel-caption {
+    /* thuộc tính position để canh giữa */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-indicators li {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: #35a22c;
+}
+
+.carousel-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000066;
+}
+
+/* PROJECT */
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #35a22c;
+    border-color: #35a22c;
+}
+
+.nav-pills .nav-link {
+    color: black;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.project__content .card {
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(0 0 0 / 13%);
+}
+
+.project__content .card-body {
+    text-align: center;
+    border: 1px solid #00000011;
+    border-radius: 0 0 30px 30px;
+    transition: all 0.5s;
+    border-top: transparent;
+}
+
+.project__content .card .card-body h4 {
+    transition: all 0.5s;
+    font-size: 18px;
+}
+
+.project__content .card:hover .card-body {
+    border-color: #35a22c;
+    /* border-top: transparent; trong suốt */
+    border-top: transparent;
+}
+
+.project__content .card:hover .card-body h4 {
+    color: #35a22c;
+}
+
+/* SERVICE */
+#service {
+    background-image: url(./../img/3.jpg);
+    background-size: cover;
+    background-position: center;
+    /* roll hình */
+    background-attachment: fixed;
+    position: relative;
+}
+
+#service .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.127);
+}
+
+.service__title {
+    position: relative;
+}
+
+/* .service__title {
+    color: white;
+} */
+
+.service__content .card {
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: #ffffff3d;
+    border: 1px solid #ffffff3d;
+    backdrop-filter: blur(4px);
+    color: white;
+    transition: all 0.5s;
+}
+
+.service__content .card:hover {
+    background-color: black;
+    border: 1px solid white;
+
+}
+
+.service__content .card-body {
+    text-align: center;
+}
+
+/* AWARD */
+#award {
+    background-image: url(./../img/memphis_3.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 50% auto;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+}
+
+#award .container {
+    padding: 70px 0;
+}
+
+#award .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.award__left {
+    background: rgba(255, 255, 255, 0.54);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.351);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
+    padding: 47px;
+}
+
+.row .col img {
+    max-width: 100%;
+}
+
+/* FOOTER */
+#footer {
+    padding: 3rem 0;
+    background-color: #222;
+}
+
+#footer .text-white {
+    color: rgba(255, 255, 255, 0.844) !important;
+}
+
+#footer .footer__icon {
+    margin-bottom: 2rem;
+}
+
+#footer .footer__icon a {
+    color: rgba(255, 255, 255, 0.844);
+}
+
+#footer .footer__icon i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.844);
+    border-radius: 50%;
+    margin: 5px;
+    transition: all 0.5s;
+}
+
+#footer .footer__icon a:hover i {
+    color: green;
+    border-color: green;
+}
+
+.footer__text {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.844);
+}
